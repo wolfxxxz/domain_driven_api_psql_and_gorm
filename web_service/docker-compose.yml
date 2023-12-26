@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:alpine3.18
+    container_name: postgres-web-server  
+    ports:
+      - 5435:5432  
+    volumes:
+      - ${HOME}/pgdata/:/var/lib/postgresql/data  
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+       
